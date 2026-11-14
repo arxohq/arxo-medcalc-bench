@@ -2,7 +2,7 @@
 
 MedCalc-Bench asks a model to read a clinical note and compute one of 55 medical calculators: creatinine clearance, CHA2DS2-VASc, APACHE II and others. We split the task in two. Arxo Materia 0.1, a 4B model based on Qwen3.5-4B, reads the clinical note and writes down the patient facts. Arxo computes the answer from those facts and returns it with the steps that led to it.
 
-Arxo Materia with Arxo is in early access. This repository publishes Arxo Materia 0.1 standalone, `Arxo-Materia-4B-MedCalc-0.1`, which reads the note and answers on its own. It covers the 55 calculators of MedCalc-Bench and is evaluated on its test split. The name comes from *materia medica*, the body of medical knowledge physicians worked from for centuries.
+Arxo Materia with Arxo is in early access. This repository publishes Arxo Materia 0.1 standalone, `Arxo-Materia-4B-MedCalc-0.1`, which reads the note and answers on its own. The models are on Hugging Face: [arxohq/Arxo-Materia-4B-MedCalc-0.1](https://huggingface.co/arxohq/Arxo-Materia-4B-MedCalc-0.1) and [arxohq/Arxo-Materia-0.8B-MedCalc-0.1](https://huggingface.co/arxohq/Arxo-Materia-0.8B-MedCalc-0.1). It covers the 55 calculators of MedCalc-Bench and is evaluated on its test split. The name comes from *materia medica*, the body of medical knowledge physicians worked from for centuries.
 
 On the 1,100 test cases of MedCalc-Bench Verified, scored with the benchmark's own evaluator:
 
@@ -181,7 +181,7 @@ The scores refer to the Verified test split. On the 887 relabelled items of the 
 
 ## Reproducing the result
 
-Arxo Materia 0.1 standalone runs on its own: the adapters are in the Release, its outputs and per-case scores in `standalone/` and `small/`. The 90.2% result needs Arxo, which is in early access: to run it on your own notes, or to verify the result independently, write to hi@arxo.io.
+Arxo Materia 0.1 standalone runs on its own. The quickest way is Hugging Face, where each model card has a ready example: [the 4B model](https://huggingface.co/arxohq/Arxo-Materia-4B-MedCalc-0.1) (the no-tools run with seed 2) and [the 0.8B model](https://huggingface.co/arxohq/Arxo-Materia-0.8B-MedCalc-0.1). All adapters are also in the Release here, with outputs and per-case scores in `standalone/` and `small/`. The 90.2% result needs Arxo, which is in early access: to run it on your own notes, or to verify the result independently, write to hi@arxo.io.
 
 ## What is in this repository
 
